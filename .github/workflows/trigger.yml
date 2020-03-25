@@ -10,11 +10,12 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
         with:
           repository: thoth-station/jupyter-notebooks
           submodules: true
           token: ${{ secrets.GITHUB_REPO_TOKEN }}
+          ssh-key: ${{ secrets.GITHUB_REPO_SSH_KEY }}
 
       - name: Create Pull Request
         id: pull_request
