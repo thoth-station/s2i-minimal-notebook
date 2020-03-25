@@ -105,6 +105,13 @@ cat >> /opt/app-root/etc/supervisord.conf << EOF
 files = /opt/app-root/etc/supervisor/*.conf
 EOF
 
+# Install and enable default nbextensions
+
+jupyter contrib nbextension install --sys-prefix
+
+jupyter nbextension install --sys-prefix https://raw.githubusercontent.com/vpavlin/jupyter-publish-extension/${PUBLISH_EXTENSION_VERSION}/publish.js
+jupyter nbextension enable  --sys-prefix publish
+
 # Make sure the S2I source directory is empty as we will use the image
 # produced to run further S2I builds.
 
