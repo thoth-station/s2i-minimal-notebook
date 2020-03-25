@@ -19,8 +19,6 @@ jobs:
 
       - name: Update submodules
         run: |-
-          # do a recursive pull to initialize references
-          git pull --recurse-submodules
           git submodule update --init --remote
 
       - name: Create Pull Request
