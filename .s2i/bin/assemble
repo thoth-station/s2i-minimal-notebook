@@ -6,6 +6,7 @@ set -eo pipefail
 
 APP_ROOT=${APP_ROOT:-/opt/app-root/src}
 
+
 # Run the original Python S2I assemble script to install packages.
 
 /usr/libexec/s2i/assemble
@@ -51,30 +52,30 @@ mv ${APP_ROOT}/src/*.sh /opt/app-root/bin
 
 # Install oc command line client for OpenShift cluster.
 
-curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v3/clients/3.11.153/linux/oc.tar.gz && \
-    tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
-    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-3.11 && \
-    rm ${APP_ROOT}/oc.tar.gz
+# curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v3/clients/3.11.153/linux/oc.tar.gz && \
+#     tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
+#     mv /opt/app-root/bin/oc /opt/app-root/bin/oc-3.11 && \
+#     rm ${APP_ROOT}/oc.tar.gz
 
-curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v3/clients/4.0.22/linux/oc.tar.gz && \
-    tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
-    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.0 && \
-    rm ${APP_ROOT}/oc.tar.gz
+# curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v3/clients/4.0.22/linux/oc.tar.gz && \
+#     tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
+#     mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.0 && \
+#     rm ${APP_ROOT}/oc.tar.gz
 
-curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.1/linux/oc.tar.gz && \
-    tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
-    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.1 && \
-    rm ${APP_ROOT}/oc.tar.gz
+# curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.1/linux/oc.tar.gz && \
+#     tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
+#     mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.1 && \
+#     rm ${APP_ROOT}/oc.tar.gz
 
-curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.2/linux/oc.tar.gz && \
-    tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
-    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.2 && \
-    rm ${APP_ROOT}/oc.tar.gz
+# curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.2/linux/oc.tar.gz && \
+#     tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
+#     mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.2 && \
+#     rm ${APP_ROOT}/oc.tar.gz
 
-curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.3/linux/oc.tar.gz && \
-    tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
-    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.3 && \
-    rm ${APP_ROOT}/oc.tar.gz
+# curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.3/linux/oc.tar.gz && \
+#     tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
+#     mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.3 && \
+#     rm ${APP_ROOT}/oc.tar.gz
 
 ln -s /opt/app-root/bin/oc-wrapper.sh /opt/app-root/bin/oc
 
@@ -109,8 +110,25 @@ EOF
 
 jupyter contrib nbextension install --sys-prefix
 
-jupyter nbextension install --sys-prefix https://raw.githubusercontent.com/vpavlin/jupyter-publish-extension/${PUBLISH_EXTENSION_VERSION}/publish.js
+jupyter nbextension install --sys-prefix https://raw.githubusercontent.com/vpavlin/jupyter-publish-extension/master/publish.js
 jupyter nbextension enable  --sys-prefix publish
+
+# Enable the extensions configurator
+
+pip install -U jupyter_nbextensions_configurator
+
+jupyter nbextensions_configurator enable --sys-prefix
+
+# Apply custom notebook configuration
+
+if [ -d "${APP_ROOT}/src/.jupyter/" ]; then
+    rsync \
+        --link-dest="${APP_ROOT}/src/.jupyter/" \
+        --recursive \
+        --remove-source-files \
+        --verbose \
+        "${APP_ROOT}/src/.jupyter/" "$(jupyter --config-dir)"
+fi
 
 # Make sure the S2I source directory is empty as we will use the image
 # produced to run further S2I builds.

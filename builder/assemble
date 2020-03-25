@@ -19,6 +19,17 @@ if [ -f "$APP_ROOT/src/extensions.in" ]; then
     done < "$APP_ROOT/src/extensions.in"
 fi
 
+# Apply custom notebook configuration
+
+if [ -d "$APP_ROOT/src/.jupyter/" ]; then
+    rsync \
+        --link-dest="$APP_ROOT/src/.jupyter/" \
+        --recursive \
+        --remove-source-files \
+        --verbose \
+        "$APP_ROOT/src/.jupyter/" $(jupyter --config-dir)
+fi
+
 # Move files from application source directory to master files directory
 # if directory has been specified. This is to facilitate later copying
 # of files into a persistent volume on startup of instance.
