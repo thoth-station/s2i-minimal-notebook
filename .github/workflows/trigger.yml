@@ -17,6 +17,12 @@ jobs:
           token: ${{ secrets.GITHUB_REPO_TOKEN }}
           ssh-key: ${{ secrets.GITHUB_REPO_SSH_KEY }}
 
+      - name: Update submodules
+        run: |-
+          # do a recursive pull to initialize references
+          git pull --recurse-submodules
+          git submodule update --init --remote
+
       - name: Create Pull Request
         id: pull_request
         uses: peter-evans/create-pull-request@v2
