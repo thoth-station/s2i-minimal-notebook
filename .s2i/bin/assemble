@@ -1,0 +1,124 @@
+#!/bin/bash
+
+set -x
+
+set -eo pipefail
+
+########################################################################
+# INFO: Install everything that's required for Jupyter notebooks here.
+########################################################################
+
+# Ensure we are using the latest pip and wheel packages.
+
+pip install -U pip setuptools wheel
+
+# Install mod_wsgi for use in optional webdav support.
+
+pip install 'mod_wsgi==4.6.8'
+
+# Install supervisord for managing multiple applications.
+
+pip install 'supervisor==4.1.0'
+
+# Install base packages needed for running Jupyter Notebooks. 
+
+pip install -r /tmp/src/requirements.txt
+
+npm cache clean --force
+
+rm -rf $HOME/.cache/yarn
+rm -rf $HOME/.node-gyp
+
+# Copy into place default config files for Jupyter and Apache webdav.
+
+cp /tmp/src/jupyter_notebook_config.py /opt/app-root/etc/
+cp /tmp/src/jupyter_kernel_gateway_config.py /opt/app-root/etc/
+cp /tmp/src/httpd-webdav.conf /opt/app-root/etc/
+
+# This S2I assemble script is only used when creating the custom image.
+# For when running the image, or using it as a S2I builder, we use a second
+# set of custom S2I scripts. We now need to move these into the correct
+# location and have the custom image use those by dropping in an image
+# metadata file which overrides the labels of the base image.
+
+mkdir -p /tmp/.s2i
+
+mv /tmp/src/builder/image_metadata.json /tmp/.s2i/image_metadata.json
+
+mv /tmp/src/builder /opt/app-root/builder
+
+mv /tmp/src/supervisor /opt/app-root/etc/supervisor
+
+mv /tmp/src/gateway /opt/app-root/gateway
+
+mv /tmp/src/*.sh /opt/app-root/bin
+
+# Install oc command line client for OpenShift cluster.
+
+curl -s -o /tmp/oc.tar.gz https://mirror.openshift.com/pub/openshift-v3/clients/3.11.153/linux/oc.tar.gz && \
+    tar -C /opt/app-root/bin -zxf /tmp/oc.tar.gz oc && \
+    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-3.11 && \
+    rm /tmp/oc.tar.gz
+
+curl -s -o /tmp/oc.tar.gz https://mirror.openshift.com/pub/openshift-v3/clients/4.0.22/linux/oc.tar.gz && \
+    tar -C /opt/app-root/bin -zxf /tmp/oc.tar.gz oc && \
+    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.0 && \
+    rm /tmp/oc.tar.gz
+
+curl -s -o /tmp/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.1/linux/oc.tar.gz && \
+    tar -C /opt/app-root/bin -zxf /tmp/oc.tar.gz oc && \
+    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.1 && \
+    rm /tmp/oc.tar.gz
+
+curl -s -o /tmp/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.2/linux/oc.tar.gz && \
+    tar -C /opt/app-root/bin -zxf /tmp/oc.tar.gz oc && \
+    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.2 && \
+    rm /tmp/oc.tar.gz
+
+curl -s -o /tmp/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.3/linux/oc.tar.gz && \
+    tar -C /opt/app-root/bin -zxf /tmp/oc.tar.gz oc && \
+    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.3 && \
+    rm /tmp/oc.tar.gz
+
+ln -s /opt/app-root/bin/oc-wrapper.sh /opt/app-root/bin/oc
+
+curl -Ls -o /tmp/kustomize.tar.gz https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v3.4.0/kustomize_v3.4.0_linux_amd64.tar.gz && \
+    tar -C /opt/app-root/bin -zxf /tmp/kustomize.tar.gz kustomize && \
+    rm /tmp/kustomize.tar.gz
+
+# Ensure passwd/group file intercept happens for any shell environment.
+
+echo "source /opt/app-root/etc/generate_container_user" >> /opt/app-root/etc/scl_enable
+
+# Install packages required by the proxy process.
+
+(cd /opt/app-root/gateway && source scl_source enable rh-nodejs10 && \
+    npm install --production)
+
+# Create additional directories.
+
+echo " -----> Creating additional directories."
+
+mkdir -p /opt/app-root/data
+
+# Generate default supervisord.conf file.
+
+echo_supervisord_conf | \
+    sed -e 's%^logfile=/tmp/supervisord.log%logfile=/dev/fd/1%' \
+        -e 's%^logfile_maxbytes=50MB%logfile_maxbytes=0%' > \
+        /opt/app-root/etc/supervisord.conf
+
+cat >> /opt/app-root/etc/supervisord.conf << EOF
+
+[include]
+files = /opt/app-root/etc/supervisor/*.conf
+EOF
+
+# Make sure the S2I source directory is empty as we will use the image
+# produced to run further S2I builds.
+
+rm -rf /tmp/src
+
+# Fixup permissions on directories and files.
+
+fix-permissions /opt/app-root
