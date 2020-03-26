@@ -25,7 +25,6 @@ if [ -d "$APP_ROOT/src/.jupyter/" ]; then
     rsync \
         --link-dest="$APP_ROOT/src/.jupyter/" \
         --recursive \
-        --remove-source-files \
         --verbose \
         "$APP_ROOT/src/.jupyter/" $(jupyter --config-dir)
 fi

@@ -133,6 +133,7 @@ jupyter nbextensions_configurator enable --sys-prefix
         rsync \
             --link-dest="/tmp/.jupyter/" \
             --recursive \
+            --verbose \
             "/tmp/.jupyter/" "$(jupyter --config-dir)"
     fi
 )
