@@ -26,7 +26,7 @@ if [ -d "$APP_ROOT/src/.jupyter/" ]; then
         --link-dest="$APP_ROOT/src/.jupyter/" \
         --recursive \
         --verbose \
-        "$APP_ROOT/src/.jupyter/" $(jupyter --config-dir)
+        "$APP_ROOT/src/.jupyter/" ${APP_ROOT}/etc/jupyter
 fi
 
 # Move files from application source directory to master files directory
