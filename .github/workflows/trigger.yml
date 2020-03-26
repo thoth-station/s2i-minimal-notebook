@@ -17,18 +17,20 @@ jobs:
           token: ${{ secrets.GITHUB_REPO_TOKEN }}
           ssh-key: ${{ secrets.GITHUB_REPO_SSH_KEY }}
 
-      - name: Update submodules
+      - name: Update submodule
         run: |-
-          git submodule update --init --remote
+          git submodule update --init --remote minimal-notebook
 
       - name: Create Pull Request
         id: pull_request
         uses: peter-evans/create-pull-request@v2
         with:
           token: ${{ secrets.GITHUB_REPO_TOKEN }}
-          title: "Automatic update"
+          title: "Automatic update of s2i-minimal-notebook"
           body: |-
-            The update has been triggered by commit [#${{ github.sha }}][0] and run [${{ github.run_id }}][1]
+            The update has been triggered by commit [${{ github.sha }}][0]
+
+            See the workflow run: [${{ github.run_id }}][1]
 
             [0]: https://github.com/${{ github.repository }}/commit/${{ github.sha }}
             [1]: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
