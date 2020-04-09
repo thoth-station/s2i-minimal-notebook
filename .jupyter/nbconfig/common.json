@@ -5,7 +5,7 @@
     "collapsible_headings/main": true,
     "contrib_nbextensions_help_item/main": true,
     "execute_time/ExecuteTime": true,
-    "hinterland/hinterland": true,
+    "hinterland/hinterland": false,
     "init_cell/main": true,
     "python-markdown/main": true,
     "publish": true,
