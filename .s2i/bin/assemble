@@ -15,6 +15,10 @@ APP_ROOT=${APP_ROOT:-/opt/app-root/src}
 # INFO: Install everything that's required for Jupyter notebooks here.
 ########################################################################
 
+# Install pipenv for jupyter-nbrequirements to use
+# TODO: This should be removed once nbrequirements can use Thoth + micropipenv only
+yum install -y pipenv && yum clean all
+
 # Install mod_wsgi for use in optional webdav support.
 
 pip install 'mod_wsgi==4.6.8'
