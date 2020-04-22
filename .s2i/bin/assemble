@@ -17,7 +17,7 @@ APP_ROOT=${APP_ROOT:-/opt/app-root/src}
 
 # Install pipenv for jupyter-nbrequirements to use
 # TODO: This should be removed once nbrequirements can use Thoth + micropipenv only
-yum install -y pipenv && yum clean all
+pip install pipenv==2018.11.26
 
 # Install mod_wsgi for use in optional webdav support.
 
