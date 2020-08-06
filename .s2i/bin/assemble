@@ -61,24 +61,9 @@ curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v3/c
     mv /opt/app-root/bin/oc /opt/app-root/bin/oc-3.11 && \
     rm ${APP_ROOT}/oc.tar.gz
 
-curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v3/clients/4.0.22/linux/oc.tar.gz && \
+curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/latest/linux/&& \
     tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
-    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.0 && \
-    rm ${APP_ROOT}/oc.tar.gz
-
-curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.1/linux/oc.tar.gz && \
-    tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
-    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.1 && \
-    rm ${APP_ROOT}/oc.tar.gz
-
-curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.2/linux/oc.tar.gz && \
-    tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
-    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.2 && \
-    rm ${APP_ROOT}/oc.tar.gz
-
-curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.3/linux/oc.tar.gz && \
-    tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
-    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4.3 && \
+    mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4 && \
     rm ${APP_ROOT}/oc.tar.gz
 
 ln -s /opt/app-root/bin/oc-wrapper.sh /opt/app-root/bin/oc
