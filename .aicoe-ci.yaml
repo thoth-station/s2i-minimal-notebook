@@ -5,5 +5,5 @@ build:
   build-stratergy: "Source"
   registry: "quay.io"
   registry-org: "thoth-station"
-  registry-project: "si-minimal-notebook"
+  registry-project: "s2i-minimal-notebook"
   registry-secret: "thoth-station-thoth-pusher-secret"
