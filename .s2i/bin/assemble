@@ -61,7 +61,7 @@ curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v3/c
     mv /opt/app-root/bin/oc /opt/app-root/bin/oc-3.11 && \
     rm ${APP_ROOT}/oc.tar.gz
 
-curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/latest/linux/&& \
+curl -s -o ${APP_ROOT}/oc.tar.gz https://mirror.openshift.com/pub/openshift-v4/clients/oc/latest/linux/oc.tar.gz&& \
     tar -C /opt/app-root/bin -zxf ${APP_ROOT}/oc.tar.gz oc && \
     mv /opt/app-root/bin/oc /opt/app-root/bin/oc-4 && \
     rm ${APP_ROOT}/oc.tar.gz
