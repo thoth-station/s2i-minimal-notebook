@@ -4,7 +4,7 @@ Minimal Thoth S2I notebook builder
 
 This repository is a Fork of Graham Dumpleton: [jupyter-on-openshift/jupyter-notebooks](https://github.com/jupyter-on-openshift/jupyter-notebooks).
 
-This repository contains Source-to-Image (S2I) build process to create a Minimal Jupyter Notebooks on OpenShift. The image can be built in OpenShift, separately using the `s2i` tool, or using a `docker build`. The minimal Jupyter notebook image can be deployed to create an empty Jupyter notebook workspace in OpenShift that you can work with. The same image, can also be used as an S2I builder to create customised Jupyter notebook images with additional Python packages installed, or notebook files preloaded.
+This repository contains Source-to-Image (S2I) build process to create a Minimal Jupyter Notebooks on OpenShift. The image can be built in OpenShift, separately using the `s2i` tool, or using a `docker build`. The same image, can also be used as an S2I builder to create customised Jupyter notebook images with additional Python packages installed, or notebook files preloaded.
 
 ## Importing the Minimal Notebook
 
@@ -18,7 +18,7 @@ This image could be imported into an OpenShift cluster using OpenShift ImageStre
 apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
-  # (Below label is needed for JupyterHubo)
+  # (Below label is needed for Opendatahub.io/JupyterHub)
   # labels:
   #   opendatahub.io/notebook-image: "true"
   name: s2i-minimal-notebook
