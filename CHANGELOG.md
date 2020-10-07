@@ -28,3 +28,13 @@
 - Added requirements files
 - Updated builder scripts
 - Imported original repository files
+
+## Release 0.0.6 (2020-10-07T17:39:48)
+### Features
+* :rocket: update owners file
+* Add support for cloning branch repo (#13)
+* :wrench: patch for downloading oc client
+* :truck: include aicoe-ci configuration file
+### Improvements
+* :books: updated README.md
+* :books: updated README.md
