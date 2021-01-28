@@ -38,3 +38,12 @@
 ### Improvements
 * :books: updated README.md
 * :books: updated README.md
+
+## Release 0.0.7 (2021-01-28T05:03:21)
+### Features
+* :guardsman: clear github workflows from the s2i-minimal-notebook (#26)
+* exclude cached files created from the build process (#28)
+* upgrade the s2i-thoth base image to stable version
+* :maple_leaf: Relock the Pipfile.lock
+### Improvements
+* :maple_leaf: updated requirement files (#25)
