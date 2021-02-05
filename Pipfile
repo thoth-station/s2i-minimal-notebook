@@ -8,10 +8,11 @@ verify_ssl = true
 [packages]
 notebook = ">=6.0.2"
 jupyterhub = "==1.1.0"
-jupyterlab = "==2.2.4"
+jupyterlab = ">=3.0.0"
+jupyterlab-requirements = "*"
 jupyter_kernel_gateway = "==2.4.0"
 jupyter-nbrequirements = "*"
 supervisor = "==4.1.0"
 
 [requires]
-python_version = "3.6"
+python_version = "3.8"
