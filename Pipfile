@@ -7,9 +7,9 @@ verify_ssl = true
 
 [packages]
 notebook = ">=6.0.2"
-jupyterhub = "==1.1.0"
+jupyterhub = "==1.2.1"
 jupyterlab = ">=3.0.0"
-jupyterlab-requirements = ">=0.3.5"
+jupyterlab-requirements = ">=0.4.2"
 jupyter_kernel_gateway = "==2.4.0"
 jupyter-nbrequirements = "*"
 supervisor = "==4.1.0"
