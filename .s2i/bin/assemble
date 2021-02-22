@@ -21,7 +21,7 @@ rm -rf /tmp/requirements.txt
 
 # Install pipenv for jupyter-nbrequirements to use
 # TODO: This should be removed once nbrequirements can use Thoth + micropipenv only
-pip install pipenv==2018.11.26
+pip install pipenv==2020.11.15
 
 # Install mod_wsgi for use in optional webdav support.
 
