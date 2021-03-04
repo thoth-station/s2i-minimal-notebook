@@ -1,4 +1,4 @@
-FROM quay.io/thoth-station/s2i-thoth-ubi8-py38:v0.20.1
+FROM quay.io/thoth-station/s2i-thoth-ubi8-py38:v0.26.0
 ENV ENABLE_MICROPIPENV="1" \
     UPGRADE_PIP_TO_LATEST="1" \
     WEB_CONCURRENCY="1" \
