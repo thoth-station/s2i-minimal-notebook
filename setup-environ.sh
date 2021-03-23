@@ -53,7 +53,7 @@ if [ x"$KUBERNETES_SERVER" != x":" ]; then
         KUBECTL_CA_ARGS="--insecure-skip-tls-verify"
     fi
 
-    oc config set-cluster local $KUBECTL_CA_ARGS --server "https://$KUBERNETES_SERVER" 
+    oc config set-cluster local $KUBECTL_CA_ARGS --server "https://$KUBERNETES_SERVER"
 
     CONTEXT_ARGS=
 
