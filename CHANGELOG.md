@@ -65,3 +65,9 @@
 ## Release 0.0.9 (2021-03-25T05:40:43)
 ### Bug Fixes
 * fixed the requirements for s2i-minimal
+
+## Release 0.0.10 (2021-03-25T06:26:55)
+### Features
+* Relock python dependencies
+* corrected the thoth configuration with ubi image
+* updated the labels for the image
