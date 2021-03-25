@@ -1,11 +1,12 @@
-FROM quay.io/thoth-station/s2i-thoth-ubi8-py38:v0.26.0
-LABEL "name"="s2i-minimal-py38-notebook:latest" \
+FROM quay.io/thoth-station/s2i-thoth-ubi8-py36:v0.26.0
+LABEL "name"="s2i-minimal-notebook:latest" \
       "summary"="Minimal S2I Jupyter Notebook." \
       "io.openshift.s2i.build.commit.ref"="master" \
       "io.openshift.s2i.build.source-location"="https://github/thoth-station/s2i-minimal-notebook" \
-      "io.openshift.s2i.build.image"="quay.io/thoth-station/s2i-thoth-ubi8-py38:v0.26.0"
+      "io.openshift.s2i.build.image"="quay.io/thoth-station/s2i-thoth-ubi8-py36:v0.26.0"
+
 ENV ENABLE_MICROPIPENV="1" \
-    THAMOS_RUNTIME_ENVIRONMENT="python38" \
+    THAMOS_RUNTIME_ENVIRONMENT="python36" \
     THOTH_ADVISE="0" \
     THOTH_ERROR_FALLBACK="1" \
     THOTH_DRY_RUN="1" \
