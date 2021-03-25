@@ -61,3 +61,7 @@
 * upgraded jupyterlab-requeriments and jupyterhub
 * upgrade pipenv for package dependency management
 * :hatched_chick: Updated jupyterhub and notebookapp to serverapp on jupyterlab use
+
+## Release 0.0.9 (2021-03-25T05:40:43)
+### Bug Fixes
+* fixed the requirements for s2i-minimal
