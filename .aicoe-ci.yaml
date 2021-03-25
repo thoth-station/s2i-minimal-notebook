@@ -4,8 +4,7 @@ overlays_dir: overlays
 overlays:
   - name: python36
     build:
-      base-image: "quay.io/thoth-station/s2i-thoth-ubi8-py36:v0.26.0"
-      build-stratergy: "Source"
+      build-stratergy: Dockerfile
       registry: "quay.io"
       registry-org: "thoth-station"
       registry-project: "s2i-minimal-notebook"

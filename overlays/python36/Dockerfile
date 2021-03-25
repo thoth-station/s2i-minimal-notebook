@@ -1,9 +1,15 @@
 FROM quay.io/thoth-station/s2i-thoth-ubi8-py36:v0.26.0
-LABEL "name"="s2i-minimal-notebook:latest" \
-      "summary"="Minimal S2I Jupyter Notebook." \
-      "io.openshift.s2i.build.commit.ref"="master" \
-      "io.openshift.s2i.build.source-location"="https://github/thoth-station/s2i-minimal-notebook" \
-      "io.openshift.s2i.build.image"="quay.io/thoth-station/s2i-thoth-ubi8-py36:v0.26.0"
+LABEL name="s2i-minimal-notebook:latest" \
+      summary="Minimal Jupyter Notebook Source-to-Image for Python 3.6 applications." \
+      description="Notebook image based on Source-to-Image.These images can be used in OpenDatahub JupterHub." \
+      io.k8s.description="Notebook image based on Source-to-Image.These images can be used in OpenDatahub JupterHub." \
+      io.k8s.display-name="Minimal Notebook Python 3.6-ubi8 S2I" \
+      io.openshift.expose-services="8888:http" \
+      io.openshift.tags="python,python36" \
+      authoritative-source-url="https://quay.io/thoth-station/s2i-minimal-notebook" \
+      io.openshift.s2i.build.commit.ref="master" \
+      io.openshift.s2i.build.source-location="https://github/thoth-station/s2i-minimal-notebook" \
+      io.openshift.s2i.build.image="quay.io/thoth-station/s2i-thoth-ubi8-py36:v0.26.0"
 
 ENV ENABLE_MICROPIPENV="1" \
     THAMOS_RUNTIME_ENVIRONMENT="python36" \
