@@ -6,7 +6,7 @@ overlays_dir: overlays
 runtime_environments:
   - name: python36
     operating_system:
-      name: rhel
+      name: ubi
       version: "8"
     python_version: "3.6"
     recommendation_type: latest
@@ -14,7 +14,7 @@ runtime_environments:
 
   - name: python38
     operating_system:
-      name: "rhel"
+      name: ubi
       version: "8"
     python_version: "3.8"
     recommendation_type: latest
