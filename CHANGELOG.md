@@ -71,3 +71,10 @@
 * Relock python dependencies
 * corrected the thoth configuration with ubi image
 * updated the labels for the image
+
+## Release 0.0.11 (2021-04-12T05:33:15)
+### Features
+* Relock python dependencies
+* lock requirements file based on new updates
+* Relock python dependencies
+* Update jupytrelab-requirements to v0.6.3 (#52)
