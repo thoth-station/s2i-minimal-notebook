@@ -11,7 +11,7 @@ APP_ROOT=${APP_ROOT:-/opt/app-root/src}
 
 /usr/libexec/s2i/assemble
 
-# Remove the cached package dependencies files generated from s2i assemble script. 
+# Remove the cached package dependencies files generated from s2i assemble script.
 rm -rf /tmp/Pipfile.lock
 rm -rf /tmp/requirements.txt
 
@@ -111,6 +111,8 @@ jupyter nbextension enable  --sys-prefix publish
 pip install -U jupyter_nbextensions_configurator
 
 jupyter nbextensions_configurator enable --sys-prefix
+
+jupyter lab build
 
 # Apply custom notebook configuration
 
