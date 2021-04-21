@@ -78,3 +78,8 @@
 * lock requirements file based on new updates
 * Relock python dependencies
 * Update jupytrelab-requirements to v0.6.3 (#52)
+
+## Release 0.0.12 (2021-04-21T15:36:13)
+### Features
+* :turtle: enable plugin for jupyter git
+* Bump jupyterlab-requirements version: (#58)
