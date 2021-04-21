@@ -112,6 +112,8 @@ pip install -U jupyter_nbextensions_configurator
 
 jupyter nbextensions_configurator enable --sys-prefix
 
+jupyter lab build
+
 # Apply custom notebook configuration
 
 if [ -d "$APP_ROOT/src/.jupyter/" ]; then

@@ -9,3 +9,4 @@ jupyterlab-requirements>=0.6.4
 jupyter_kernel_gateway==2.4.0
 jupyter-nbrequirements
 supervisor==4.1.0
+jupyterlab-git==0.30.0b2
