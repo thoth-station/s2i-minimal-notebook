@@ -83,3 +83,7 @@
 ### Features
 * :turtle: enable plugin for jupyter git
 * Bump jupyterlab-requirements version: (#58)
+
+## Release 0.0.13 (2021-04-22T03:27:17)
+### Features
+* :four_leaf_clover: update the pip for latest setuptools and pip
