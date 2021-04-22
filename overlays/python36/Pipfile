@@ -12,6 +12,7 @@ jupyterlab = "~=3.0.0"
 jupyter_kernel_gateway = "==2.4.0"
 jupyter-nbrequirements = "*"
 supervisor = "==4.1.0"
+jupyterlab-git = "==0.30.0b2"
 
 [requires]
 python_version = "3.6"
