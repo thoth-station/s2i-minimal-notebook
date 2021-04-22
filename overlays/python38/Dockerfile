@@ -13,6 +13,7 @@ LABEL name="s2i-minimal-notebook:latest" \
 
 ENV JUPYTER_LAB_ENABLE="1" \
     ENABLE_MICROPIPENV="1" \
+    UPGRADE_PIP_TO_LATEST="1" \
     THAMOS_RUNTIME_ENVIRONMENT="python38" \
     THOTH_ADVISE="0" \
     THOTH_ERROR_FALLBACK="1" \
