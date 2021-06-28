@@ -91,3 +91,10 @@
 ## Release 0.0.14 (2021-04-22T20:13:16)
 ### Features
 * Fix the jupyterlab default env var
+
+## Release 0.0.15 (2021-06-28T04:49:22)
+### Features
+* Add new jupyterlab-requirements
+* :hatched_chick: update the prow resource limits
+### Improvements
+* :cloud: upgrade the base image and dependencies
