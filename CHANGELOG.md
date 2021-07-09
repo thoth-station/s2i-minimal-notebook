@@ -98,3 +98,7 @@
 * :hatched_chick: update the prow resource limits
 ### Improvements
 * :cloud: upgrade the base image and dependencies
+
+## Release 0.0.16 (2021-07-09T13:01:08)
+### Features
+* Use jupyterlab-requirements v0.8.0
