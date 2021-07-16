@@ -58,7 +58,7 @@ function install_routes(directory) {
 install_routes(path.join(__dirname, 'routes'));
 
 app.use(proxy(uri_root_path, {
-    target: 'http://127.0.0.1:8082',
+    target: 'http://127.0.0.1:8888',
     ws: true
 }));
 
