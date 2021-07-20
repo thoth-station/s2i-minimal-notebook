@@ -102,3 +102,7 @@
 ## Release 0.0.16 (2021-07-09T13:01:08)
 ### Features
 * Use jupyterlab-requirements v0.8.0
+
+## Release 0.0.17 (2021-07-20T09:35:48)
+### Improvements
+* make webdav working again
