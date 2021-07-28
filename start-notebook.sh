@@ -47,7 +47,11 @@ fi
 
 if [[ ! -z "${JUPYTERHUB_API_TOKEN}" ]]; then
     if [[ "$JUPYTER_ENABLE_LAB" =~ ^(true|yes|y|1)$ ]]; then
-        JUPYTER_PROGRAM="jupyter labhub"
+        if [[ "$JUPYTER_ENABLE_LAB_COLLABORATIVE" =~ ^(true|yes|y|1)$ ]]; then
+            JUPYTER_PROGRAM="jupyterhub-singleuser --LabHub.collaborative=True"
+        else
+            JUPYTER_PROGRAM="jupyter labhub"
+        fi
     else
         JUPYTER_PROGRAM="jupyterhub-singleuser"
     fi

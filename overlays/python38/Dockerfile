@@ -12,6 +12,7 @@ LABEL name="s2i-minimal-notebook:latest" \
       io.openshift.s2i.build.image="quay.io/thoth-station/s2i-thoth-ubi8-py38:v0.26.0"
 
 ENV JUPYTER_ENABLE_LAB="1" \
+    JUPYTER_ENABLE_LAB_COLLABORATIVE="1" \
     ENABLE_MICROPIPENV="1" \
     UPGRADE_PIP_TO_LATEST="1" \
     THAMOS_RUNTIME_ENVIRONMENT="python38" \
