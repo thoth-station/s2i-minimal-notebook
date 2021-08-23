@@ -13,6 +13,7 @@ fi
 
 cd /opt/app-root/gateway
 
-source scl_source enable rh-nodejs10
+# Don't fail on ubi8 which doesn't use scl anymore
+source scl_source enable rh-nodejs10 || true
 
 exec npm start
