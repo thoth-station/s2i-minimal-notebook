@@ -1,5 +1,9 @@
 # Release 0.0.5 (2020-08-18T16:58:20)
 
+## Release 0.1.1 (2021-08-31T20:16:53)
+### Features
+* Fix Horus in JupyterHub (#89)
+
 - :truck: include thoth yaml file for auto updates
 - :arrow_up: update base image to v0.15.0 and add version file (#8)
 - :jack_o_lantern: include only necessary oc binaries (#6)
