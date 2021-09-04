@@ -20,6 +20,14 @@ runtime_environments:
     recommendation_type: latest
     base_image: quay.io/thoth-station/s2i-thoth-ubi8-py38:v0.26.0
 
+  - name: f34-python39
+    operating_system:
+      name: fedora
+      version: "34"
+    python_version: "3.9"
+    recommendation_type: latest
+    base_image: quay.io/thoth-station/s2i-thoth-f34-py39:v0.31.1
+
 managers:
   - name: update
     configuration:
