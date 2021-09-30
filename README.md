@@ -12,6 +12,7 @@ A pre-built version of the minimal notebook which is based on Thoth Ubi8 Images,
 
 - <https://quay.io/repository/thoth-station/s2i-minimal-notebook> [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-notebook)
 - <https://quay.io/repository/thoth-station/s2i-minimal-py38-notebook> [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-py38-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-py38-notebook)
+- <https://quay.io/repository/thoth-station/s2i-minimal-f34-py39-notebook> [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-f34-py39-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-f34-py39-notebook)
 
 This image could be imported into an OpenShift cluster using OpenShift ImageStream:
 

@@ -17,3 +17,12 @@ overlays:
       registry-org: "thoth-station"
       registry-project: "s2i-minimal-py38-notebook"
       registry-secret: "thoth-station-thoth-pusher-secret"
+
+  - name: f34-python39
+    build:
+      build-stratergy: Dockerfile
+      registry: "quay.io"
+      registry-org: "thoth-station"
+      registry-project: "s2i-minimal-f34-py39-notebook"
+      registry-secret: "thoth-station-thoth-pusher-secret"
+
