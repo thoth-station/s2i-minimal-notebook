@@ -1,5 +1,12 @@
 # Release 0.0.5 (2020-08-18T16:58:20)
 
+## Release 0.1.2 (2021-09-30T05:45:44)
+### Features
+* dependency update for all images
+* update the build for f34 python3.9 notebook
+* Bump jupyterlab-requirements to v0.11.0
+* Add f34 based image
+
 ## Release 0.1.1 (2021-08-31T20:16:53)
 ### Features
 * Fix Horus in JupyterHub (#89)
