@@ -569,9 +569,9 @@ jupyterlab-pygments==0.1.2 \
     --hash=sha256:abfb880fd1561987efaefcb2d2ac75145d2a5d0139b1876d5be806e32f630008 \
     --hash=sha256:cfcda0873626150932f438eccf0f8bf22bfa92345b814890ab360d666b254146
     # via nbconvert
-jupyterlab-requirements==0.10.9 \
-    --hash=sha256:6511ec5dc3df21505a955ad1ec8af12d5316a0146220c1c5b7a4616b0fd1e661 \
-    --hash=sha256:74f7ab1b5263c3d2913bfad2b1157877d9b4f8e4b633e331eb53a9552276de03
+jupyterlab-requirements==0.11.0 \
+    --hash=sha256:3639b1f65ec06f1ab520bc9ff3534245a6e04ec8704d5f6bb5c7189dc8a8ba3b \
+    --hash=sha256:e4b1c82c54dfd3f1ff21fdb11db9b7ea8030ff1efd5f2d01fdae35f724ac7474
     # via -r requirements.in
 jupyterlab-server==2.6.1 \
     --hash=sha256:58d4b660fce8da4e90f0433ac54f462436fe5fbe731e3a281e15adcdecddb0eb \
