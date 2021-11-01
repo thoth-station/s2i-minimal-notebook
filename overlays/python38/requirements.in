@@ -2,12 +2,12 @@
 #
 # Default dependencies
 #
-notebook>=6.0.2
+notebook~=6.4.0
 jupyterhub~=1.3.0
 jupyterlab~=3.1.0
-jupyterlab-requirements>=0.11.1
+jupyterlab-requirements~=0.12.0
 jupyter_kernel_gateway==2.4.0
 jupyter-nbrequirements
 supervisor==4.1.0
 jupyterlab-git==0.30
-jupyterlab-spellchecker>=0.6.0
+jupyterlab-spellchecker~=0.7.2
