@@ -21,11 +21,11 @@ rm -rf /tmp/requirements.txt
 
 # Install pipenv for jupyter-nbrequirements to use
 # TODO: This should be removed once nbrequirements can use Thoth + micropipenv only
-pip install pipenv==2020.11.15
+pip install --no-cache-dir --disable-pip-version-check pipenv==2020.11.15
 
 # Install mod_wsgi for use in optional webdav support.
 
-pip install 'mod_wsgi==4.6.8'
+pip install --no-cache-dir --disable-pip-version-check 'mod_wsgi==4.6.8'
 
 # Install base packages needed for running Jupyter Notebooks.
 
@@ -108,7 +108,7 @@ jupyter nbextension enable  --sys-prefix publish
 
 # Enable the extensions configurator
 
-pip install -U jupyter_nbextensions_configurator
+pip install --no-cache-dir -U jupyter_nbextensions_configurator
 
 jupyter nbextensions_configurator enable --sys-prefix
 
@@ -128,6 +128,15 @@ fi
 # produced to run further S2I builds
 
 (shopt -s dotglob ; rm -rf ${APP_ROOT}/src/*)
+
+# Final cleanup
+
+jupyter lab clean
+
+npm cache clean --force
+
+rm -rf $HOME/.cache/yarn
+rm -rf $HOME/.node-gyp
 
 # Fixup permissions on directories and files.
 

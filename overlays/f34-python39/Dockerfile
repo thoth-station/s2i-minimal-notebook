@@ -1,4 +1,4 @@
-FROM quay.io/thoth-station/s2i-thoth-f34-py39:v0.31.1
+FROM quay.io/thoth-station/s2i-thoth-f34-py39:v0.32.0
 LABEL name="s2i-minimal-notebook:latest" \
       summary="Minimal Jupyter Notebook Source-to-Image for Python 3.9 applications." \
       description="Notebook image based on Source-to-Image.These images can be used in OpenDatahub JupterHub." \
@@ -9,7 +9,7 @@ LABEL name="s2i-minimal-notebook:latest" \
       authoritative-source-url="https://quay.io/thoth-station/s2i-minimal-f34-py39-notebook" \
       io.openshift.s2i.build.commit.ref="master" \
       io.openshift.s2i.build.source-location="https://github/thoth-station/s2i-minimal-notebook" \
-      io.openshift.s2i.build.image="quay.io/thoth-station/s2i-thoth-f34-py39:v0.31.1"
+      io.openshift.s2i.build.image="quay.io/thoth-station/s2i-thoth-f34-py39:v0.32.0"
 
 ENV JUPYTER_ENABLE_LAB="1" \
     ENABLE_MICROPIPENV="1" \
@@ -26,7 +26,9 @@ USER root
 # Upgrade NodeJS > 12.0
 RUN curl -sL https://rpm.nodesource.com/setup_14.x | bash -  && \
   yum remove -y nodejs && \
-  yum install -y nodejs
+  yum install -y nodejs && \
+  yum -y clean all && \
+  rm -rf /var/cache/dnf
 
 # Copying in override assemble/run scripts
 COPY .s2i/bin /tmp/scripts
