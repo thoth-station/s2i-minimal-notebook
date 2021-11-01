@@ -1,5 +1,16 @@
 # Release 0.0.5 (2020-08-18T16:58:20)
 
+## Release 0.2.0 (2021-11-01T17:32:24)
+* :turtle: Updated the dependencies for the overlays
+* :arrow_up: Automatic update of dependencies by Kebechet for the python38 environment
+* :arrow_up: Automatic update of dependencies by Kebechet for the python38 environment
+* :arrow_up: Automatic update of dependencies by Kebechet for the python38 environment
+* :arrow_up: Automatic update of dependencies by Kebechet for the python38 environment
+* :arrow_up: Automatic update of dependencies by Kebechet for the python38 environment
+* :arrow_up: Automatic update of dependencies by Kebechet for the python36 environment
+* Add spellchecker and update jupyterlab-requirements
+* add no-cache and cleanup
+
 ## Release 0.1.2 (2021-09-30T05:45:44)
 ### Features
 * dependency update for all images
