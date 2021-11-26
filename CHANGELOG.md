@@ -1,5 +1,12 @@
 # Release 0.0.5 (2020-08-18T16:58:20)
 
+## Release 0.2.1 (2021-11-26T18:22:21)
+* include the jupyter lab spell-checker in f34 python 3.9 image
+* :arrow_up: Automatic update of dependencies by Kebechet for the f34-python39 environment
+* :arrow_up: Automatic update of dependencies by Kebechet for the f34-python39 environment
+* :arrow_up: Automatic update of dependencies by Kebechet for the python36 environment
+* Bump jupyterlab-requirements to v0.13.0
+
 ## Release 0.2.0 (2021-11-01T17:32:24)
 * :turtle: Updated the dependencies for the overlays
 * :arrow_up: Automatic update of dependencies by Kebechet for the python38 environment
