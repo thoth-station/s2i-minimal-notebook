@@ -1,5 +1,9 @@
 # Release 0.0.5 (2020-08-18T16:58:20)
 
+## Release 0.2.2 (2021-12-09T06:36:59)
+* Updated the base image and remove curl request (#499)
+* bump jupyterlab-requirements to v0.14.0 (#497)
+
 ## Release 0.2.1 (2021-11-26T18:22:21)
 * include the jupyter lab spell-checker in f34 python 3.9 image
 * :arrow_up: Automatic update of dependencies by Kebechet for the f34-python39 environment
