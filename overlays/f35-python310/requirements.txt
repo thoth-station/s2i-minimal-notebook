@@ -487,9 +487,9 @@ jupyterhub==1.3.0 \
 jupyterlab==3.1.19 \
     --hash=sha256:5fea3ceed4ad364a175b5ec85220c9b6362575965b4b291f8ad1c66eb32b5795 \
     --hash=sha256:8853a6fa16179ae24b6277541b1619593e0e99da10b380cd72f391b549f59705
-jupyterlab-git==0.30 \
-    --hash=sha256:2f5984fb10216ffbcb3e25611a6bd296fc94b116bd0cb86dd921498bd297bf14 \
-    --hash=sha256:75eda44f84af96a7366d9a93eee9e69ca1bc5a534db40b4839aa4d503a299aa0
+jupyterlab-git==0.36.0 \
+    --hash=sha256:0af436290f2f6c18a52ad3b40631d637b398205623158157faebd02ef6666e2c \
+    --hash=sha256:2be875adaf4fb2a2a54923e77358e048e0c80afdc5a04770a8119859062ceb01
 jupyterlab-pygments==0.1.2 \
     --hash=sha256:abfb880fd1561987efaefcb2d2ac75145d2a5d0139b1876d5be806e32f630008 \
     --hash=sha256:cfcda0873626150932f438eccf0f8bf22bfa92345b814890ab360d666b254146
@@ -502,6 +502,9 @@ jupyterlab-server==2.12.0; python_version >= '3.7' \
 jupyterlab-spellchecker==0.7.2 \
     --hash=sha256:75d1709dc5f606857f01e9fa30a01d23c4f0f782f3888ca4bea2b9ecdbfa2d11 \
     --hash=sha256:e13732cf5a277d40cd1a25eaa9264c13b67a4231e4bd90695722ddf6eebf6ab1
+jupyterlab-tabnine==0.0.24 \
+    --hash=sha256:15c3e6e9bfcd24fb18eee900e67c35322994cce2065a6590cf0e515e12f8bbdf \
+    --hash=sha256:6a0fe256a777cc2f08c6b323bc574458a16a0c131a59d3e3a981e86801a8dd69
 kubernetes==11.0.0 \
     --hash=sha256:1a2472f8b01bc6aa87e3a34781f859bded5a5c8ff791a53d889a8bd6cc550430 \
     --hash=sha256:4af81201520977139a143f96123fb789fa351879df37f122916b9b6ed050bbaf
