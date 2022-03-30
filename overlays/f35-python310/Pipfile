@@ -13,7 +13,8 @@ jupyterlab-requirements = "==0.14.0"
 jupyter_kernel_gateway = "==2.4.0"
 jupyter-nbrequirements = "*"
 supervisor = "==4.1.0"
-jupyterlab-git = "==0.30"
+jupyterlab-git = "==0.36.0"
+jupyterlab-tabnine = "==0.0.24"
 jupyterlab-spellchecker = "~=0.7.2"
 
 [requires]
