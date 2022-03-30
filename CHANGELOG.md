@@ -1,5 +1,26 @@
 # Release 0.0.5 (2020-08-18T16:58:20)
 
+## Release 0.3.0 (2022-03-30T19:20:02)
+* 43afcb4 Update the jupyterhub version for secruity
+* f6fb2d2 Include jupyterlab tabnine support in minimal
+* 2454c74 :arrow_up: Automatic update of dependencies by Kebechet for the python38 environment
+* 9019fc9 setup minimal image for f35 with py 3.10
+* 9f83edb set the latest build to be tagged release
+* a92df92 :arrow_up: Automatic update of dependencies by Kebechet for the python38 environment (#524)
+* 724b1dd :ship: Bump up base image initialized in CI. (#519)
+* da026ef :arrow_up: Automatic update of dependencies by Kebechet for the f34-python39 environment
+* 60f210c :arrow_up: Automatic update of dependencies by Kebechet for the python36 environment
+* eb7b399 :arrow_up: Automatic update of dependencies by Kebechet for the python36 environment
+* 8de21c5 update the pre-commit version used by prow, pre-commit plugin versions
+* d190a29 :ship: Bump up base image initialized in CI.
+* 1bbf6db :arrow_up: Automatic update of dependencies by Kebechet for the f34-python39 environment
+* ea077fc :arrow_up: Automatic update of dependencies by Kebechet for the python38 environment
+* b1f30a2 :arrow_up: Automatic update of dependencies by Kebechet for the python36 environment
+* 63f4c9e :arrow_up: Automatic update of dependencies by Kebechet for the python36 environment
+* 06baa48 Update jupyterlab-requirements to v0.15.0
+* 29fc7ee :arrow_up: Automatic update of dependencies by Kebechet for the python36 environment
+* 1b65414 :arrow_up: Automatic update of dependencies by Kebechet for the python36 environment
+
 ## Release 0.2.2 (2021-12-09T06:36:59)
 * Updated the base image and remove curl request (#499)
 * bump jupyterlab-requirements to v0.14.0 (#497)
