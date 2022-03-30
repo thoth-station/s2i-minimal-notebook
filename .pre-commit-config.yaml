@@ -20,14 +20,8 @@ repos:
       - id: detect-private-key
       - id: check-ast
       - id: debug-statements
-
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.1.0
-    hooks:
       - id: check-toml
       - id: check-yaml
-      - id: end-of-file-fixer
-      - id: trailing-whitespace
 
   - repo: https://github.com/psf/black
     rev: 22.3.0
