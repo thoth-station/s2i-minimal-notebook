@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9ec0734c7d1735c91a78e09ae81faa988a2ebea5697f02b389a50f9435d0525b"
+            "sha256": "a49a24d39db49c85819c73d896096c905e043b0127b76c9cce7962b6e30435d3"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -704,11 +704,11 @@
         },
         "jupyter-client": {
             "hashes": [
-                "sha256:00e284dd1a5ac605ead8a42ada2a97041b642c1ef6cefb30c3c415b4eb94bead",
-                "sha256:c5d9177edb74a0a0d060965dd33ec589b58cf7d1a16f9b60c465404852e0f992"
+                "sha256:aa177279e93205d0681ec0e2e210da01b22c5a1464a56abd455adcac64f0de91",
+                "sha256:d10e31ac4b8364d1cb30ebcee9e5cc7b7eb5d23b76912be9ef3d4c75167fbc68"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==7.2.0"
+            "version": "==7.2.1"
         },
         "jupyter-contrib-core": {
             "hashes": [
@@ -807,11 +807,11 @@
         },
         "jupyterhub": {
             "hashes": [
-                "sha256:05ff701209c340c792cd103606c448c52ace772ece858380905ddd1a2136ee8e",
-                "sha256:4ad6120410adb80715a0004386fdbe969987223dd64c76f62365f49cb95a0341"
+                "sha256:98e3f29671be6f530433d654a02d5a2d4c0ca637f7999e42aeb1c836f418bbec",
+                "sha256:dc618f657c23ba46280e36257e50931806674ba0e9e6498afb091efc6226d69d"
             ],
             "index": "pypi",
-            "version": "==1.3.0"
+            "version": "==1.5.0"
         },
         "jupyterlab": {
             "hashes": [
@@ -1860,9 +1860,10 @@
         },
         "voluptuous": {
             "hashes": [
-                "sha256:4db1ac5079db9249820d49c891cb4660a6f8cae350491210abce741fabf56513"
+                "sha256:cae6a4526b434b642816b34a00e1186d5a5f5e0c948ab94d2a918e01e5874066",
+                "sha256:e3b5f6cb68fcb0230701b5c756db4caa6766223fc0eaf613931fdba51025981b"
             ],
-            "version": "==0.12.2"
+            "version": "==0.13.0"
         },
         "wcwidth": {
             "hashes": [
