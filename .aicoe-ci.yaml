@@ -5,6 +5,7 @@ overlays:
   - name: python36
     build:
       build-stratergy: Dockerfile
+      custom-tag: "latest"
       registry: "quay.io"
       registry-org: "thoth-station"
       registry-project: "s2i-minimal-notebook"
@@ -13,6 +14,7 @@ overlays:
   - name: python38
     build:
       build-stratergy: Dockerfile
+      custom-tag: "latest"
       registry: "quay.io"
       registry-org: "thoth-station"
       registry-project: "s2i-minimal-py38-notebook"
@@ -21,6 +23,7 @@ overlays:
   - name: f34-python39
     build:
       build-stratergy: Dockerfile
+      custom-tag: "latest"
       registry: "quay.io"
       registry-org: "thoth-station"
       registry-project: "s2i-minimal-f34-py39-notebook"
