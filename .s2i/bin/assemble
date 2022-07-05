@@ -25,7 +25,7 @@ pip install --no-cache-dir --disable-pip-version-check pipenv==2020.11.15
 
 # Install mod_wsgi for use in optional webdav support.
 
-pip install --no-cache-dir --disable-pip-version-check 'mod_wsgi==4.6.8'
+pip install --no-cache-dir --disable-pip-version-check 'mod_wsgi==4.9.2'
 
 # Install base packages needed for running Jupyter Notebooks.
 
