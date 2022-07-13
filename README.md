@@ -68,5 +68,5 @@ Instead of using the pre-built version of the minimal notebook, you can build th
 - Build python38: From the overlay/python38 by setting the environment variable `THAMOS_RUNTIME_ENVIRONMENT="python38"` in the Dockerfile
 
   ```bash
-  podman build -t s2i-minimal-py38-notebook -f overlays/python38/Dockerfile
+  podman build -t s2i-minimal-py38-notebook -f overlays/python38/Dockerfile .
   ```
