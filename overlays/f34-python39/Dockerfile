@@ -1,4 +1,4 @@
-FROM quay.io/thoth-station/s2i-thoth-f34-py39:v0.34.0
+FROM quay.io/thoth-station/s2i-thoth-f34-py39:v0.34.1
 
 ENV IMAGE_NAME="quay.io/thoth-station/s2i-minimal-f34-py39-notebook" \
     IMAGE_TAG="latest" \
