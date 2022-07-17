@@ -1,5 +1,19 @@
 # Release 0.0.5 (2020-08-18T16:58:20)
 
+## Release 0.4.0 (2022-07-17T22:51:25)
+* 0c570d5 :arrow_up: Updated the base image for the all overlays (#562)
+* 86ac665 Upgrade the requirements file as well (#561)
+* a488353 :whale: Include jupyter server proxy in minimal (#560)
+* e153007 Update base images in the dockerfiles
+* 5008140 Set the env vars and labels for the s2i-minimal images
+* abd8275 Fixed mod_wsgi version to build successfully for f35-python310
+* 84df947 orrected command for py38
+* e083031 :arrow_up: Automatic update of dependencies by Kebechet for the python38 environment
+* 3218af8 :arrow_up: Automatic update of dependencies by Kebechet for the f34-python39 environment
+* 4502a5a :ship: Bump up base image initialized in CI.
+* 9d8fe38 :arrow_up: Automatic update of dependencies by Kebechet for the python38 environment
+* 06f8c21 Automatic update of dependencies by Kebechet for the f34-python39 environment (#538)
+
 ## Release 0.3.0 (2022-03-30T19:20:02)
 * 43afcb4 Update the jupyterhub version for secruity
 * f6fb2d2 Include jupyterlab tabnine support in minimal
