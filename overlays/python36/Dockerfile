@@ -23,9 +23,9 @@ LABEL name="$IMAGE_NAME" \
       io.openshift.expose-services="8888:http" \
       io.openshift.tags="python,python36" \
       authoritative-source-url="https://quay.io/thoth-station/s2i-minimal-notebook" \
-      io.openshift.s2i.build.image="quay.io/thoth-station/s2i-thoth-ubi8-py36"
+      io.openshift.s2i.build.image="quay.io/thoth-station/s2i-thoth-ubi8-py36" \
       io.openshift.s2i.build.commit.ref="master" \
-      io.openshift.s2i.build.source-location="https://github/thoth-station/s2i-minimal-notebook" \
+      io.openshift.s2i.build.source-location="https://github/thoth-station/s2i-minimal-notebook"
 
 USER root
 
