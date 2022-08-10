@@ -1,5 +1,8 @@
 # Release 0.0.5 (2020-08-18T16:58:20)
 
+## Release 1.0.0 (2022-08-10T16:11:02)
+* cd7de13 :hatched_chick: Fix the label issue in python3.6 overlays
+
 ## Release 0.4.0 (2022-07-17T22:51:25)
 * 0c570d5 :arrow_up: Updated the base image for the all overlays (#562)
 * 86ac665 Upgrade the requirements file as well (#561)
