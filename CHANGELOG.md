@@ -1,3 +1,8 @@
+
+## Release 0.5.0 (2022-09-29T18:15:14)
+* bfd036b Update the python dependencies for all overlays
+* 7b061b1 Introduce ubi8-py39 and ubi9-py39 based minimal notebook
+* 6f77029 :arrow_up: Bump nbconvert from 6.5.0 to 6.5.1 in /overlays/f34-python39
 ## Release 0.4.1 (2022-09-14T16:11:02)
 * cd7de13 :hatched_chick: Fix the label issue in python3.6 overlays
 
