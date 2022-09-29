@@ -1,0 +1,15 @@
+--index-url https://pypi.org/simple
+#
+# Default dependencies
+#
+notebook~=6.4.0
+ipython<8.0.0
+jupyterhub~=1.5.0
+jupyterlab~=3.1.0
+jupyter_kernel_gateway==2.4.0
+supervisor==4.1.0
+jupyter-server-proxy
+jupyterlab-requirements>=0.16.0
+jupyterlab-git>=0.36.0
+jupyterlab-tabnine>=0.0.24
+jupyterlab-spellchecker~=0.7.2
