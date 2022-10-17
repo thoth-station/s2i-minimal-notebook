@@ -7,6 +7,7 @@ verify_ssl = true
 
 [packages]
 notebook = "~=6.4.0"
+traitlets = "~=4.3.3"
 jupyterhub = "~=1.5.0"
 jupyterlab = "~=3.1.0"
 jupyter_kernel_gateway = "==2.4.0"
@@ -14,7 +15,7 @@ jupyter-nbrequirements = "*"
 supervisor = "==4.1.0"
 
 jupyter-server-proxy = "*"
-jupyterlab-git = ">=0.36.0"
+jupyterlab-git = "~=0.36.0"
 jupyterlab-tabnine = ">=0.0.24"
 jupyterlab-spellchecker = "~=0.7.2"
 
