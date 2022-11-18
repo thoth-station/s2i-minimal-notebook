@@ -1,9 +1,10 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
 approvers:
-  - harshad16
   - goern
+  - Gregory-Pereira
+  - harshad16
   - sesheta
 reviewers:
-  - LaVLaS
+  - harshad16
   - Gregory-Pereira
