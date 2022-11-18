@@ -1,8 +1,22 @@
+## Release 0.5.1 (2022-11-18T18:15:14)
+* ae0feeef :clipboard: Include list of images in table format (#607)
+* 53e8c140 :recycle: HouseKeeping: Updated pre-commit and OWNERS (#605)
+* dfd698c1 Include nbgitpuller in the notebook images (#547)
+* 47bcfe76 :ship: Bump up base image initialized in CI.
+* cc7a7afb :sparkles: update the base image to v0.35.1
+* 935fe4e6 :arrow_up: Automatic update of dependencies by Kebechet for the f34-python39 environment
+* faa271ac :arrow_up: Automatic update of dependencies by Kebechet for the ubi9-py39 environment
+* e05e714c :arrow_up: Automatic update of dependencies by Kebechet for the ubi8-py39 environment
+* c9c5b67b :arrow_up: Automatic update of dependencies by Kebechet for the python38 environment
+* 7d6fca17 Lock versions for Python 3.6
+* d9433514 Update README.md
+* 85f84634 Updated README
 
 ## Release 0.5.0 (2022-09-29T18:15:14)
 * bfd036b Update the python dependencies for all overlays
 * 7b061b1 Introduce ubi8-py39 and ubi9-py39 based minimal notebook
 * 6f77029 :arrow_up: Bump nbconvert from 6.5.0 to 6.5.1 in /overlays/f34-python39
+
 ## Release 0.4.1 (2022-09-14T16:11:02)
 * cd7de13 :hatched_chick: Fix the label issue in python3.6 overlays
 
