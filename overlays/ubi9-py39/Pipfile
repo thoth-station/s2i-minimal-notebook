@@ -18,6 +18,7 @@ jupyterlab-requirements = ">=0.16.0"
 jupyterlab-git = ">=0.36.0"
 jupyterlab-tabnine = ">=0.0.24"
 jupyterlab-spellchecker = "~=0.7.2"
+nbgitpuller = "*"
 
 [requires]
 python_version = "3.9"
