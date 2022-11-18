@@ -13,12 +13,14 @@ Note: When using Minimal Thoth S2I notebook build process, it is required to use
 
 A pre-built version of the minimal notebook which is based on Thoth Ubi8 Images, can be found at on quay.io at:
 
-- <https://quay.io/repository/thoth-station/s2i-minimal-notebook> [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-notebook)
-- <https://quay.io/repository/thoth-station/s2i-minimal-py38-notebook> [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-py38-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-py38-notebook)
-- <https://quay.io/repository/thoth-station/s2i-minimal-f34-py39-notebook> [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-f34-py39-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-f34-py39-notebook)
-- <https://quay.io/repository/thoth-station/s2i-minimal-f35-py310-notebook> [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-f35-py310-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-f35-py310-notebook)
-- <https://quay.io/repository/thoth-station/s2i-minimal-ubi8-py39-notebook> [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-ubi8-py39-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-ubi8-py39-notebook)
-- <https://quay.io/repository/thoth-station/s2i-minimal-ubi9-py39-notebook> [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-ubi9-py39-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-ubi9-py39-notebook)
+|  Image | Status |
+|---|---|
+| [ubi8-py3.6](https://quay.io/repository/thoth-station/s2i-minimal-notebook)  | [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-notebook)  |
+| [ubi8-py3.8](https://quay.io/repository/thoth-station/s2i-minimal-py38-notebook)  | [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-py38-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-py38-notebook)  |
+| [ubi8-py3.9](https://quay.io/repository/thoth-station/s2i-minimal-ubi8-py39-notebook)  | [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-ubi8-py39-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-ubi8-py39-notebook)  |
+| [ubi9-py3.9](https://quay.io/repository/thoth-station/s2i-minimal-ubi9-py39-notebook)  | [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-ubi9-py39-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-ubi9-py39-notebook)  |
+| [f34-py3.9](https://quay.io/repository/thoth-station/s2i-minimal-f34-py39-notebook)  | [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-f34-py39-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-f34-py39-notebook)  |
+| [f35-py3.10](https://quay.io/repository/thoth-station/s2i-minimal-f35-py310-notebook)  | [![Docker Repository on Quay](https://quay.io/repository/thoth-station/s2i-minimal-f35-py310-notebook/status "Docker Repository on Quay")](https://quay.io/repository/thoth-station/s2i-minimal-f35-py310-notebook)  |
 
 
 This image could be imported into an OpenShift cluster using OpenShift ImageStream:
