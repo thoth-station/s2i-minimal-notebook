@@ -741,7 +741,7 @@
                 "sha256:aaf6ab2fcbc68ab6c4c6ba924b57991a388ccc1c8fae782f2433340a40743dfe",
                 "sha256:cf7bae999005dce012738d09610e69a47acd765797c0365c803f96c21ea2f32b"
             ],
-            "markers": "python_version >= '3.4' and python_version < '4'",
+            "markers": "python_version >= '3.4' and python_full_version < '4.0.0'",
             "version": "==2021.3.2"
         },
         "ipython": {
@@ -910,11 +910,11 @@
         },
         "jupyterlab-git": {
             "hashes": [
-                "sha256:38db4b813821d9bb1c8cce28d4c94282723a9977de1d18437383e3e20fe3e9e1",
-                "sha256:60873bea38cdfc0a6a284f75de10be44ceb898ec9f7a7d341c9ee8ba4c345b25"
+                "sha256:51767daa002f08a7cf0b372114eb706eff2f34f12d70b5347700464e6887483e",
+                "sha256:ed82cf235e6b9ca011254d1260e1a4ac66ebbe05422d55f68f4881c13f24a6ad"
             ],
             "index": "pypi",
-            "version": "==0.40.1"
+            "version": "==0.41.0"
         },
         "jupyterlab-pygments": {
             "hashes": [
@@ -1665,7 +1665,7 @@
                 "sha256:7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983",
                 "sha256:8fefa2a1a1365bf5520aac41836fbee479da67864514bdb821f31ce07ce65349"
             ],
-            "markers": "python_version >= '3.7' and python_version < '4'",
+            "markers": "python_version >= '3.7' and python_full_version < '4.0.0'",
             "version": "==2.28.1"
         },
         "requests-oauthlib": {
@@ -1688,7 +1688,7 @@
                 "sha256:a4eb26484f2c82589bd9a17c73d32a010b1e29d89f1604cd9bf3a2097b81bb5e",
                 "sha256:ba3a3775974105c221d31141f2c116f4fd65c5ceb0698657a11e9f295ec93fd0"
             ],
-            "markers": "python_version < '4' and python_full_version >= '3.6.3'",
+            "markers": "python_full_version >= '3.6.3' and python_full_version < '4.0.0'",
             "version": "==12.6.0"
         },
         "rich-click": {
@@ -2109,7 +2109,7 @@
                 "sha256:a6948034483cb263a467bef5a564eb35458e950fcade2cd7ad1d7d4339db4711",
                 "sha256:febdf35f3e0e45845dc2caa79a18780f9ec7a85a37a9a2c0389b314ba82d8912"
             ],
-            "markers": "python_version < '4' and python_full_version >= '3.7.2'",
+            "markers": "python_full_version >= '3.7.2' and python_full_version < '4.0.0'",
             "version": "==2.2.0"
         },
         "zipp": {
