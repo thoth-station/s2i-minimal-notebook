@@ -778,7 +778,7 @@
                 "sha256:90bccb6d8a42c4fcd85dbc877de974760040d44084070dedb458644c6faa5e11",
                 "sha256:d2bc7d08ac89e31e15dc8e73be04475f368a986dad7768d80349fe04ce368da3"
             ],
-            "markers": "python_version >= '3.4' and python_version < '4'",
+            "markers": "python_version >= '3.4' and python_full_version < '4.0.0'",
             "version": "==2023.1.0.0"
         },
         "ipython": {
@@ -1718,7 +1718,7 @@
                 "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f",
                 "sha256:942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
             ],
-            "index": "pypi",
+            "markers": "python_version >= '3.7'",
             "version": "==2.31.0"
         },
         "requests-oauthlib": {
@@ -1757,7 +1757,7 @@
                 "sha256:90260d9058e514786967344d0ef75fa8727eed8a7d2e43ce9f4bcf1b536174f7",
                 "sha256:e38464a49c6c85d7f1351b0126661487a7e0a14a50f1675ec50eb34d4f20ef21"
             ],
-            "markers": "python_version >= '3.6' and python_version < '4'",
+            "markers": "python_version >= '3.6' and python_full_version < '4.0.0'",
             "version": "==4.9"
         },
         "ruamel.yaml": {
@@ -1994,7 +1994,7 @@
                 "sha256:c2de14066c4a38b4ecbbcd55c5cc4b5340eb04f1c5e81da7451ef555859c833f",
                 "sha256:c367ab6c0393d71171123ca5515c61ff62fe09024fa6bf299cd1339dc9456829"
             ],
-            "markers": "python_version >= '3.8'",
+            "index": "pypi",
             "version": "==6.3.2"
         },
         "traitlets": {
@@ -2151,7 +2151,7 @@
                 "sha256:17b5548479b3d5b30adec7a87ffcdcddb403d14a2bb86fbcee97f37951e13427",
                 "sha256:547afd1a9700ac3a29a9f5591c70343bef186ed5dfb5e545a9bb0c77e561a1c9"
             ],
-            "markers": "python_version < '4' and python_full_version >= '3.7.2'",
+            "markers": "python_full_version >= '3.7.2' and python_full_version < '4.0.0'",
             "version": "==2.3.0"
         },
         "zipp": {
